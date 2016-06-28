@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.github.pedrong</groupId>
+	<artifactId>mule-kafka-connector</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>mule-module</packaging>
+	<name>Mule MuleKafka Anypoint Connector</name>
+
+	<parent>
+		<groupId>org.mule.tools.devkit</groupId>
+		<artifactId>mule-devkit-parent</artifactId>
+		<version>3.8.0</version>
+	</parent>
+
+
+	<properties>
+		<category>Community</category>
+		<licensePath>LICENSE.md</licensePath>
+		<devkit.studio.package.skip>false</devkit.studio.package.skip>
+		<kafka.clients.version>0.9.0.1</kafka.clients.version>
+	</properties>
+
+	<repositories>
+		<repository>
+			<id>mulesoft-releases</id>
+			<name>MuleSoft Releases Repository</name>
+			<url>http://repository.mulesoft.org/releases/</url>
+			<layout>default</layout>
+		</repository>
+	</repositories>
+
+	<scm>
+		<connection>scm:git:git://github.com:pedrong/mule-kafka-connector.git</connection>
+		<developerConnection>scm:git:git@github.com:pedrong/mule-kafka-connector.git</developerConnection>
+		<url>http://github.com/pedrong/mule-kafka-connector</url>
+	</scm>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>external.atlassian.jgitflow</groupId>
+				<artifactId>jgitflow-maven-plugin</artifactId>
+				<version>1.0-m5.1</version>
+				<configuration>
+					<flowInitContext>
+						<masterBranchName>master</masterBranchName>
+						<developBranchName>develop</developBranchName>
+						<featureBranchPrefix>feature/</featureBranchPrefix>
+						<releaseBranchPrefix>release/</releaseBranchPrefix>
+						<hotfixBranchPrefix>hotfix/</hotfixBranchPrefix>
+						<versionTagPrefix>v</versionTagPrefix>
+					</flowInitContext>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.apache.kafka</groupId>
+			<artifactId>kafka-clients</artifactId>
+			<version>${kafka.clients.version}</version>
+		</dependency>
+	</dependencies>
+
+</project>
