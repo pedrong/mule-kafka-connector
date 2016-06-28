@@ -1,6 +1,8 @@
 # Mule Kafka Anypoint Connector
 
-[Connector description including destination service or application with]
+Provides means to receive and send messages to Kafka.
+Implements the new Kafka consumer for version 0.9.0.X as defined in http://kafka.apache.org/090/javadoc/index.html?org/apache/kafka/clients/consumer/KafkaConsumer.html.
+As well as the producer defined in http://kafka.apache.org/090/javadoc/index.html?org/apache/kafka/clients/producer/KafkaProducer.html. 
 
 # Mule supported versions
 Mule 3.7.x, 3.8.x
